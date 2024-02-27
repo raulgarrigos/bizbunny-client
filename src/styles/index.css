@@ -1,0 +1,559 @@
+html {
+  min-height: 100vh;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  background: linear-gradient(to bottom, #60b6d7, #a6dcef);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Theme styles */
+
+.default-page .welcome-title {
+  background-color: #eeb3c5;
+}
+
+.default-page .custom-link {
+  color: white;
+}
+
+.default-page .custom-link:hover h3 {
+  color: #eeb3c5;
+}
+
+.default-page .board-details-lists {
+  background: linear-gradient(to bottom, #ffed8a, #fffaa9 150%);
+}
+
+.default-btn.btn.btn-primary {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 20px;
+  background-color: #eeb3c5;
+  color: white;
+  border-color: #eeb3c5;
+}
+
+.alt-page .welcome-title {
+  background-color: #e0b0ff;
+}
+
+.alt-page .custom-link {
+  color: #e0b0ff;
+}
+
+.alt-page .custom-link:hover h3 {
+  color: #937ab1;
+}
+
+.alt-page .board-details-lists {
+  background: linear-gradient(to bottom, #eeb3c5, #f2c4d0 150%);
+}
+
+.alt-page .board-details-info {
+  color: #937ab1;
+  background-color: #ffed8a;
+}
+
+.alt-btn.btn.btn-primary {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 20px;
+  background-color: #e0b0ff;
+  color: white;
+  border-color: #e0b0ff;
+}
+
+/* Tema por defecto  */
+.default-list {
+  border-color: #f4f5f7;
+  background-color: #f4f5f7;
+}
+
+/* Tema Cotton Candy */
+.cotton-list {
+  border-color: #ffbbda;
+  background-color: #ffbbda;
+}
+
+.cotton-list .task-container {
+  background-color: #fff0f1;
+}
+
+/* Tema Astra */
+.astra-list {
+  border-color: #fdffb6;
+  background-color: #fdffb6;
+}
+
+.astra-list .task-container {
+  background-color: #fff5e4;
+}
+
+/* Tema Heliotrope */
+.heliotrope-list {
+  border-color: #9381ff;
+  background-color: #9381ff;
+}
+
+.heliotrope-list .task-container {
+  background-color: #dedaf4;
+}
+/* Tema Tropical Blue */
+.tropical-list {
+  border-color: #c0e4f6;
+  background-color: #c0e4f6;
+}
+
+.tropical-list .task-container {
+  background-color: #dffdff;
+}
+
+/* Tema Moon Raker */
+.moonraker-list {
+  border-color: #e8cff8;
+  background-color: #e8cff8;
+}
+
+.moonraker-list .task-container {
+  background-color: #dedaf4;
+}
+
+/* Tema Spray */
+.spray-list {
+  border-color: #90f1ef;
+  background-color: #90f1ef;
+}
+
+.spray-list .task-container {
+  background-color: #dffdff;
+}
+
+/* Tema Pastel Pink */
+.pastel-list {
+  border-color: #ffd6e0;
+  background-color: #ffd6e0;
+}
+
+.pastel-list .task-container {
+  background-color: #fff0f1;
+}
+
+/* Tema Reef */
+.reef-list {
+  border-color: #c1fba4;
+  background-color: #c1fba4;
+}
+
+.reef-list .task-container {
+  background-color: #e4f4e3;
+}
+
+/* Tema Magic Mint */
+.magic-list {
+  border-color: #7bf1a8;
+  background-color: #7bf1a8;
+}
+
+.magic-list .task-container {
+  background-color: #f0f4bf;
+}
+
+/* Styles for main page (Board) */
+
+.boards-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.boards-container img {
+  position: absolute;
+  width: 85px;
+}
+
+.welcome-title {
+  font-family: "VT323", monospace;
+  font-size: 4vw;
+  color: white;
+  padding: 10px;
+  background-color: #eeb3c5;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 20px;
+}
+
+.boards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.board {
+  flex-basis: calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+
+.board h3 {
+  font-size: 3vw;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: white;
+}
+
+.custom-link:hover h3 {
+  color: #eeb3c5;
+}
+
+.boards-button {
+  padding: 20px;
+}
+.btn-primary.custom-button {
+  --bs-btn-bg: #937ab1;
+  color: white;
+  border-color: #937ab1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.btn-primary.custom-button:hover {
+  color: white;
+  border-color: #eeb3c5;
+  background-color: #eeb3c5;
+}
+
+/* Modal BoardForm */
+
+.modal {
+  --bs-modal-bg: #60b6d7;
+}
+
+.modal-title {
+  color: #fffaa9;
+  margin: 0 auto;
+}
+
+.modal-header .btn-close {
+  padding: 0;
+  margin: 0;
+}
+
+.form-label {
+  color: #fffaa9;
+  font-weight: 600;
+}
+
+.btn-outline-secondary.custom-button {
+  color: white;
+  border-color: #937ab1;
+  font-size: 18px;
+}
+
+.btn-outline-secondary.custom-button:hover {
+  color: white;
+  border-color: #eeb3c5;
+  background-color: #eeb3c5;
+}
+
+/* Board Details */
+
+.board-details-info {
+  padding: 10px;
+  color: white;
+  background-color: #60b6d7;
+  margin-bottom: 20px;
+}
+
+.board-details-info h3,
+p {
+  display: inline;
+  margin-left: 10px;
+}
+
+.board-details-buttons {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.board-details-buttons button {
+  margin-right: 10px;
+}
+
+.custom-button-details {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.custom-button-details a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+
+.board-details-lists {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+  background: linear-gradient(to bottom, #ffed8a, #fffaa9 150%);
+}
+
+.list-details {
+  width: 20%;
+  border: 3px solid;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos por defecto */
+.default-list {
+  border-color: #f4f5f7;
+  background-color: #f4f5f7;
+}
+
+/* Tema Cotton Candy */
+.cotton-list {
+  border-color: #ffbbda;
+  background-color: #ffbbda;
+}
+
+.cotton-list .task-container {
+  background-color: #fff0f1;
+}
+
+/* Tema Astra */
+.astra-list {
+  border-color: #fdffb6;
+  background-color: #fdffb6;
+}
+
+.astra-list .task-container {
+  background-color: #fff5e4;
+}
+
+/* Tema Heliotrope */
+.heliotrope-list {
+  border-color: #9381ff;
+  background-color: #9381ff;
+}
+
+.heliotrope-list .task-container {
+  background-color: #dedaf4;
+}
+/* Tema Tropical Blue */
+.tropical-list {
+  border-color: #c0e4f6;
+  background-color: #c0e4f6;
+}
+
+.tropical-list .task-container {
+  background-color: #dffdff;
+}
+
+/* Tema Moon Raker */
+.moonraker-list {
+  border-color: #e8cff8;
+  background-color: #e8cff8;
+}
+
+.moonraker-list .task-container {
+  background-color: #dedaf4;
+}
+
+/* Tema Spray */
+.spray-list {
+  border-color: #90f1ef;
+  background-color: #90f1ef;
+}
+
+.spray-list .task-container {
+  background-color: #dffdff;
+}
+
+/* Tema Pastel Pink */
+.pastel-list {
+  border-color: #ffd6e0;
+  background-color: #ffd6e0;
+}
+
+.pastel-list .task-container {
+  background-color: #fff0f1;
+}
+
+/* Tema Reef */
+.reef-list {
+  border-color: #c1fba4;
+  background-color: #c1fba4;
+}
+
+.reef-list .task-container {
+  background-color: #e4f4e3;
+}
+
+/* Tema Magic Mint */
+.magic-list {
+  border-color: #7bf1a8;
+  background-color: #7bf1a8;
+}
+
+.magic-list .task-container {
+  background-color: #f0f4bf;
+}
+
+.list-details-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #172b4d;
+  margin-bottom: 8px;
+}
+
+#dropdown-basic-button {
+  margin: 10px;
+  color: white;
+  background-color: white;
+  border-color: black;
+  width: 25px;
+  height: 25px;
+  font-size: 2px;
+}
+
+.list-details-delete-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.custom-button-list {
+  --bs-btn-bg: #937ab1;
+  color: white;
+  border-color: #937ab1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 10px 15px 0;
+  text-decoration: none;
+}
+
+.custom-button-list:hover {
+  color: white;
+  border-color: #eeb3c5;
+  background-color: #eeb3c5;
+}
+
+/* Tasks */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.task-container {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8vw;
+  color: #172b4d;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.btn-primary.add-task-button {
+  --bs-btn-bg: #937ab1;
+  color: white;
+  border-color: #937ab1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.8vw;
+  margin-top: 20px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.btn-primary.add-task-button:hover {
+  color: white;
+  border-color: #eeb3c5;
+  background-color: #eeb3c5;
+}
+
+@media only screen and (max-width: 500px) {
+  .welcome-title {
+    font-size: 8vw;
+  }
+
+  .board {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .board h3 {
+    font-size: 3rem;
+  }
+
+  .board-details {
+    width: 95%;
+  }
+
+  .board-details-lists {
+    width: 100%;
+  }
+
+  .lists-all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-details {
+    width: 95%;
+    margin-right: 0;
+  }
+
+  .modal-content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .custom-button-list {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .btn-primary.add-task-button {
+    font-size: 16px;
+  }
+
+  .task-container p {
+    font-size: 16px;
+  }
+}
