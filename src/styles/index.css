@@ -41,7 +41,7 @@ body {
 .default-btn.btn.btn-primary {
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 0.8vw;
   margin: 20px;
   background-color: #eeb3c5;
   color: white;
@@ -251,7 +251,7 @@ body {
   border-color: #937ab1;
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 0.8vw;
   margin-top: 20px;
   text-decoration: none;
 }
@@ -324,7 +324,7 @@ p {
 .custom-button-details {
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 0.8vw;
   margin-top: 20px;
   text-decoration: none;
 }
@@ -484,7 +484,7 @@ p {
   margin-top: 10px;
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 0.8vw;
 }
 .custom-button-list {
   --bs-btn-bg: #937ab1;
@@ -588,7 +588,23 @@ p {
     font-size: 14px;
   }
 
+  .default-btn.btn.btn-primary {
+    font-size: 16px;
+  }
+
+  .btn-primary.custom-button {
+    font-size: 16px;
+  }
+
+  .custom-button-details {
+    font-size: 16px;
+  }
+
   .btn-primary.add-task-button {
+    font-size: 16px;
+  }
+
+  .list-details-delete-button {
     font-size: 16px;
   }
 
