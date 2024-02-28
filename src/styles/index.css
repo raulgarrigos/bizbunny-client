@@ -1,5 +1,6 @@
 html {
   min-height: 100vh;
+  user-select: none;
 }
 
 html,
@@ -79,6 +80,10 @@ body {
   background-color: #e0b0ff;
   color: white;
   border-color: #e0b0ff;
+}
+
+.alt-page .no-lists {
+  color: white;
 }
 
 /* Tema por defecto  */
@@ -199,7 +204,6 @@ body {
   margin-bottom: 20px;
   margin-left: 0;
   padding-left: 20px;
-  user-select: none;
 }
 
 .boards-list {
@@ -218,7 +222,6 @@ body {
 
 .board h3 {
   font-size: 3vw;
-  user-select: none;
 }
 
 .create-board {
@@ -227,7 +230,6 @@ body {
   font-weight: 400;
   color: white;
   margin: 20px;
-  user-select: none;
   cursor: pointer;
 }
 
@@ -341,8 +343,22 @@ p {
   background: linear-gradient(to bottom, #ffed8a, #fffaa9 150%);
 }
 
+.lists-all {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.no-lists {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #eeb3c5;
+  margin: 20px;
+}
+
 .list-details {
-  width: 20%;
+  width: 100%;
   border: 3px solid;
   box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
   border-radius: 4px;

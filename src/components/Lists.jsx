@@ -88,7 +88,7 @@ function Lists() {
   }
 
   return (
-    <div className="lists-all" style={{ display: "flex", gap: "16px" }}>
+    <div className="lists-all">
       {listDetails && listDetails.length > 0 ? (
         listDetails.map((list) => (
           <div
@@ -151,7 +151,7 @@ function Lists() {
           </div>
         ))
       ) : (
-        <p>No lists found.</p>
+        <p className="no-lists">No lists found.</p>
       )}
       <div className="list-button">
         <Button
