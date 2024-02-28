@@ -5,7 +5,6 @@ import service from "../services/config";
 
 function BoardForm({ fetchBoards, showModal, handleClose }) {
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const [owner, setOwner] = useState("");
 
   const redirect = useNavigate();
@@ -22,14 +21,12 @@ function BoardForm({ fetchBoards, showModal, handleClose }) {
     try {
       const response = await service.post("/boards", {
         title,
-        description,
         owner,
       });
       fetchBoards();
 
       // Limpiar los campos después de enviar el formulario
       setTitle("");
-      setDescription("");
       handleClose(); // Cerrar el modal después de crear el tablero
     } catch (error) {
       console.error("Error creating board:", error);
@@ -52,19 +49,6 @@ function BoardForm({ fetchBoards, showModal, handleClose }) {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               autoFocus // Autofocus en el campo de título
-            />
-          </Form.Group>
-
-          <Form.Group
-            controlId="formDescription"
-            style={{ marginBottom: "1rem" }}
-          >
-            <Form.Label>Description:</Form.Label>
-            <Form.Control
-              as="textarea"
-              placeholder="Enter description"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
             />
           </Form.Group>
 

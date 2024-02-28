@@ -52,7 +52,9 @@ function Boards() {
         </div>
       ) : (
         <div>
-          <p>Create your first workspace</p>
+          <p className="create-board" onClick={handleShow}>
+            Create your first BunnySpace
+          </p>
         </div>
       )}
 
