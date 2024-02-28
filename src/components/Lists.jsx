@@ -4,6 +4,7 @@ import service from "../services/config";
 import ListForm from "./ListForm";
 import Tasks from "./Tasks";
 import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import { SyncLoader } from "react-spinners";
 import { ListThemeContext } from "../context/listTheme.context";
 
 const themes = [
@@ -84,7 +85,17 @@ function Lists() {
   };
 
   if (isLoading) {
-    return <h3>Loading...</h3>;
+    return (
+      <div
+        style={{
+          paddingTop: "20px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <SyncLoader color="white" size={30} />
+      </div>
+    );
   }
 
   return (

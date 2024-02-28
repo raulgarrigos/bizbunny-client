@@ -5,6 +5,7 @@ import service from "../../services/config";
 import BoardEdit from "../../components/BoardEdit";
 import Lists from "../../components/Lists";
 import { Button } from "react-bootstrap";
+import { SyncLoader } from "react-spinners";
 
 function BoardDetails() {
   const [boardDetails, setBoardDetails] = useState(null);
@@ -45,7 +46,17 @@ function BoardDetails() {
   };
 
   if (isLoading) {
-    return <h3>Loading...</h3>;
+    return (
+      <div
+        style={{
+          paddingTop: "20px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <SyncLoader color="white" size={30} />
+      </div>
+    );
   }
 
   return (

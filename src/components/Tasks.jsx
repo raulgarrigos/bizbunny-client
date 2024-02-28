@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import service from "../services/config";
 import TaskForm from "./TaskForm";
 import TaskEdit from "./TaskEdit";
+import { SyncLoader } from "react-spinners";
 import { Button } from "react-bootstrap";
 
 function Tasks({ listId }) {
@@ -84,9 +85,18 @@ function Tasks({ listId }) {
   };
 
   if (isLoading) {
-    return <h3>Loading tasks...</h3>;
+    return (
+      <div
+        style={{
+          paddingTop: "20px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <SyncLoader color="white" size={30} />
+      </div>
+    );
   }
-
   return (
     <div className="task-container-wrapper">
       <ul

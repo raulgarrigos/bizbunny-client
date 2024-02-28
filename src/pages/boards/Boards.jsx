@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, redirect } from "react-router-dom";
 import service from "../../services/config";
 import BoardForm from "../../components/BoardForm";
+import { SyncLoader } from "react-spinners";
 
 import { Button } from "react-bootstrap";
 
@@ -30,7 +31,17 @@ function Boards() {
   const handleClose = () => setShowModal(false);
 
   if (isLoading) {
-    return <h3>Loading...</h3>;
+    return (
+      <div
+        style={{
+          paddingTop: "20px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <SyncLoader color="white" size={30} />
+      </div>
+    );
   }
 
   return (
