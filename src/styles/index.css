@@ -182,7 +182,7 @@ body {
 
 .boards-container img {
   position: absolute;
-  width: 85px;
+  width: 90px;
 }
 
 .welcome-title {
@@ -510,6 +510,11 @@ p {
 @media only screen and (max-width: 500px) {
   .welcome-title {
     font-size: 8vw;
+  }
+
+  .boards-container img {
+    position: absolute;
+    width: 45px;
   }
 
   .board {
