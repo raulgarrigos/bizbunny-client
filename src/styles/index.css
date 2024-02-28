@@ -541,6 +541,15 @@ p {
   background-color: #eeb3c5;
 }
 
+.error-page {
+  text-align: center;
+}
+.error-title {
+  font-family: "VT323", monospace;
+  font-size: 3vw;
+  margin: 20px;
+}
+
 @media only screen and (max-width: 500px) {
   .welcome-title {
     font-size: 8vw;
@@ -584,11 +593,14 @@ p {
   }
 
   .custom-button-list {
-    padding: 8px 16px;
     font-size: 14px;
   }
 
   .default-btn.btn.btn-primary {
+    font-size: 16px;
+  }
+
+  .alt-btn.btn.btn-primary {
     font-size: 16px;
   }
 
