@@ -25,7 +25,7 @@ function Lists() {
   const [showModal, setShowModal] = useState(false);
 
   const params = useParams();
-  const navigate = useNavigate();
+  const redirect = useNavigate();
 
   const { toggleListTheme, getListTheme } = useContext(ListThemeContext);
 
@@ -50,10 +50,19 @@ function Lists() {
   const handleDelete = async (listId) => {
     try {
       await service.delete(`/boards/${params.boardId}/lists/${listId}`);
-      fetchLists();
+
+      const updatedLists = listDetails.filter((list) => list._id !== listId);
+      setListDetails(updatedLists);
+      console.log("Deleted");
+
+      if (updatedLists.length === 0) {
+        fetchLists();
+      } else {
+        fetchLists();
+      }
     } catch (error) {
       console.error("Error deleting list:", error);
-      navigate("/error");
+      redirect("/error");
     }
   };
 

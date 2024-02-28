@@ -10,7 +10,8 @@ function TaskEdit({
   task,
   listId,
   taskId,
-  onEditComplete,
+  taskDetails,
+  setTaskDetails,
 }) {
   const [title, setTitle] = useState(task.title);
   const [description, setDescription] = useState(task.description);
@@ -49,7 +50,14 @@ function TaskEdit({
       await service.delete(
         `/boards/${params.boardId}/lists/${listId}/tasks/${taskId}`
       );
-      fetchTasks();
+
+      const updatedTasks = taskDetails.filter((task) => task._id !== taskId);
+      setTaskDetails(updatedTasks);
+      console.log("Deleted");
+
+      if (updatedTasks.length === 0) {
+        fetchTasks();
+      }
       handleCloseEdit();
     } catch (error) {
       console.error("Error deleting task:", error);

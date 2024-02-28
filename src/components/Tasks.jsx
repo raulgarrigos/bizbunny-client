@@ -116,7 +116,8 @@ function Tasks({ listId }) {
                 task={task}
                 listId={listId}
                 taskId={task._id}
-                onEditComplete={handleEditComplete}
+                setTaskDetails={setTaskDetails}
+                taskDetails={taskDetails}
               />
             </li>
           ))
