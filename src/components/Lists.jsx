@@ -34,6 +34,16 @@ function Lists() {
     fetchLists();
   }, [params.boardId]);
 
+  useEffect(() => {
+    // Recuperar y aplicar el tema almacenado para cada lista al cargar la página
+    listDetails.forEach((list) => {
+      const storedTheme = localStorage.getItem(`listTheme_${list._id}`);
+      if (storedTheme) {
+        toggleListTheme(list._id, storedTheme);
+      }
+    });
+  }, [listDetails, toggleListTheme]);
+
   const fetchLists = async () => {
     try {
       const response = await service.get(`/boards/${params.boardId}/lists`);
@@ -69,6 +79,7 @@ function Lists() {
 
   const handleThemeChange = (listId, theme) => {
     toggleListTheme(listId, theme);
+    localStorage.setItem(`listTheme_${listId}`, theme); // Almacenar el tema seleccionado
   };
 
   const themeColors = {

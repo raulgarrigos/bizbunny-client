@@ -9,7 +9,7 @@ import Error from "./pages/error/Error";
 import NotFound from "./pages/error/NotFound";
 
 function App() {
-  const { toggleTheme, selectedPageTheme } = useContext(ThemeContext);
+  const { selectedPageTheme } = useContext(ThemeContext);
   const [currentTheme, setCurrentTheme] = useState(selectedPageTheme);
 
   useEffect(() => {
