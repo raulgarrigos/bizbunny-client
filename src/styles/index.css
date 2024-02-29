@@ -41,7 +41,7 @@ body {
 .default-btn.btn.btn-primary {
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 0.8vw;
+  font-size: 15px;
   margin: 20px;
   background-color: #eeb3c5;
   color: white;
@@ -251,7 +251,7 @@ body {
   border-color: #937ab1;
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 0.8vw;
+  font-size: 15px;
   margin-top: 20px;
   text-decoration: none;
 }
@@ -324,7 +324,7 @@ p {
 .custom-button-details {
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 0.8vw;
+  font-size: 15px;
   margin-top: 20px;
   text-decoration: none;
 }
@@ -347,7 +347,6 @@ p {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  align-items: center;
 }
 
 .no-lists {
@@ -484,7 +483,7 @@ p {
   margin-top: 10px;
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 0.8vw;
+  font-size: 15px;
 }
 .custom-button-list {
   --bs-btn-bg: #937ab1;
@@ -517,7 +516,7 @@ p {
   box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
   padding: 10px;
   margin-bottom: 10px;
-  font-size: 0.8vw;
+  font-size: 15px;
   color: #172b4d;
   max-width: 100%;
   word-wrap: break-word;
@@ -529,7 +528,7 @@ p {
   border-color: #937ab1;
   padding: 10px 20px;
   border-radius: 10px;
-  font-size: 0.8vw;
+  font-size: 15px;
   margin-top: 20px;
   text-decoration: none;
   width: 100%;
