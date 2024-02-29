@@ -1,16 +1,12 @@
-import React, { useEffect } from "react";
-import "./styles/App.css";
-
+import { useContext } from "react";
 import { Routes, Route } from "react-router";
-
+import { Button } from "react-bootstrap";
+import { ThemeContext } from "./context/theme.context";
+import "./styles/App.css";
 import Boards from "./pages/boards/Boards";
 import BoardDetails from "./pages/boards/BoardDetails";
 import Error from "./pages/error/Error";
 import NotFound from "./pages/error/NotFound";
-
-import { useContext } from "react";
-import { ThemeContext } from "./context/theme.context";
-import { Button } from "react-bootstrap";
 
 function App() {
   const { toggleTheme, selectedPageTheme, selectedBtnTheme } =

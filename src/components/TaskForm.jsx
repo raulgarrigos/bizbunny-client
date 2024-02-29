@@ -52,7 +52,7 @@ function TaskForm({ listId, fetchTasks, showModalForm, handleCloseForm }) {
               placeholder="Enter title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              autoFocus // Autofocus en el campo de título
+              autoFocus
             />
           </Form.Group>
 
@@ -77,12 +77,5 @@ function TaskForm({ listId, fetchTasks, showModalForm, handleCloseForm }) {
     </Modal>
   );
 }
-
-TaskForm.propTypes = {
-  listId: PropTypes.string.isRequired,
-  fetchTasks: PropTypes.func.isRequired,
-  showModalForm: PropTypes.bool.isRequired,
-  handleCloseForm: PropTypes.func.isRequired,
-};
 
 export default TaskForm;
