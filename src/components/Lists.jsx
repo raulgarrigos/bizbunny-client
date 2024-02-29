@@ -4,7 +4,7 @@ import service from "../services/config";
 import ListForm from "./ListForm";
 import Tasks from "./Tasks";
 import { Button, Dropdown, DropdownButton } from "react-bootstrap";
-import { SyncLoader } from "react-spinners";
+import { BeatLoader } from "react-spinners";
 import { ListThemeContext } from "../context/listTheme.context";
 
 const themes = [
@@ -93,7 +93,7 @@ function Lists() {
           justifyContent: "center",
         }}
       >
-        <SyncLoader color="white" size={30} />
+        <BeatLoader color="white" size={30} />
       </div>
     );
   }

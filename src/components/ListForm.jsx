@@ -1,8 +1,7 @@
-// ListForm.js
-import React, { useState } from "react";
+import { useState } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
-import service from "../services/config";
 import { useNavigate, useParams } from "react-router-dom";
+import service from "../services/config";
 
 function ListForm({ boardId, fetchLists, showModal, handleClose }) {
   const [title, setTitle] = useState("");
@@ -13,12 +12,10 @@ function ListForm({ boardId, fetchLists, showModal, handleClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validar que se haya ingresado un título antes de enviar el formulario
     if (!title.trim()) {
       alert("Please enter a title for the list");
       return;
     }
-    // Realizar la solicitud al backend para crear un nuevo tablero
     try {
       await service.post(`/boards/${params.boardId}/lists`, {
         title,
@@ -26,9 +23,8 @@ function ListForm({ boardId, fetchLists, showModal, handleClose }) {
       });
       fetchLists();
 
-      // Limpiar los campos después de enviar el formulario
       setTitle("");
-      handleClose(); // Cerrar el modal después de crear el tablero
+      handleClose();
     } catch (error) {
       console.error("Error creating list:", error);
       redirect("/error");
@@ -51,7 +47,7 @@ function ListForm({ boardId, fetchLists, showModal, handleClose }) {
               placeholder="Enter title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              autoFocus // Autofocus en el campo de título
+              autoFocus
             />
           </Form.Group>
 

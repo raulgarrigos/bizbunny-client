@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Link, redirect } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { BeatLoader } from "react-spinners";
+import { Button } from "react-bootstrap";
 import service from "../../services/config";
 import BoardForm from "../../components/BoardForm";
-import { SyncLoader } from "react-spinners";
-
-import { Button } from "react-bootstrap";
 
 function Boards() {
   const [boards, setBoards] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
+
+  const redirect = useNavigate();
 
   useEffect(() => {
     fetchBoards();
@@ -39,7 +40,7 @@ function Boards() {
           justifyContent: "center",
         }}
       >
-        <SyncLoader color="white" size={30} />
+        <BeatLoader color="white" size={30} />
       </div>
     );
   }

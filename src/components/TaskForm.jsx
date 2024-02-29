@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { Modal, Form, Button } from "react-bootstrap";
-import PropTypes from "prop-types";
-
 import { useNavigate, useParams } from "react-router-dom";
+import { Modal, Form, Button } from "react-bootstrap";
 import service from "../services/config";
 
 function TaskForm({ listId, fetchTasks, showModalForm, handleCloseForm }) {

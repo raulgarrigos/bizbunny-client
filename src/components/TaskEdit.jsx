@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import service from "../services/config";
 import { Modal, Form, Button } from "react-bootstrap";
+import service from "../services/config";
 
 function TaskEdit({
   fetchTasks,

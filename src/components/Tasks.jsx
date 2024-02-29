@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { BeatLoader } from "react-spinners";
+import { Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import service from "../services/config";
-import TaskForm from "./TaskForm";
 import TaskEdit from "./TaskEdit";
-import { SyncLoader } from "react-spinners";
-import { Button } from "react-bootstrap";
+import TaskForm from "./TaskForm";
 
 function Tasks({ listId }) {
   const [taskDetails, setTaskDetails] = useState([]);
@@ -63,16 +63,13 @@ function Tasks({ listId }) {
     try {
       const updatedTasks = taskDetails.map((task) => {
         if (task._id === taskId) {
-          // Toggle the completion status of the task
           return { ...task, completed: !task.completed };
         }
         return task;
       });
 
-      // Update the state with the modified tasks
       setTaskDetails(updatedTasks);
 
-      // Update the task's completion status on the server
       await service.put(
         `/boards/${params.boardId}/lists/${listId}/tasks/${taskId}`,
         {
@@ -93,7 +90,7 @@ function Tasks({ listId }) {
           justifyContent: "center",
         }}
       >
-        <SyncLoader color="white" size={30} />
+        <BeatLoader color="white" size={30} />
       </div>
     );
   }

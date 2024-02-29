@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-
 import { useNavigate, useParams } from "react-router-dom";
 import service from "../services/config";
 

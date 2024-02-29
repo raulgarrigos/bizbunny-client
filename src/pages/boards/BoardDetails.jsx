@@ -1,17 +1,15 @@
-// BoardDetails.js
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { BeatLoader } from "react-spinners";
 import service from "../../services/config";
 import BoardEdit from "../../components/BoardEdit";
 import Lists from "../../components/Lists";
-import { Button } from "react-bootstrap";
-import { SyncLoader } from "react-spinners";
 
 function BoardDetails() {
   const [boardDetails, setBoardDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
-  const [isCreatingList, setIsCreatingList] = useState(false);
 
   const redirect = useNavigate();
   const params = useParams();
@@ -54,7 +52,7 @@ function BoardDetails() {
           justifyContent: "center",
         }}
       >
-        <SyncLoader color="white" size={30} />
+        <BeatLoader color="white" size={30} />
       </div>
     );
   }
