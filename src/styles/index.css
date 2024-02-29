@@ -207,19 +207,17 @@ body {
 }
 
 .boards-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
   padding: 20px;
   max-width: 100%;
 }
 
 .board {
-  flex-basis: calc(50% - 20px);
-  max-width: calc(50% - 20px);
+  width: calc(20% - 20px);
   margin-bottom: 20px;
 }
-
 .board h3 {
   font-size: 3vw;
 }
