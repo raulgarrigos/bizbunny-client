@@ -5,7 +5,6 @@ const ListThemeContext = createContext();
 function ListThemeWrapper(props) {
   const [listThemes, setListThemes] = useState({});
 
-  // Function to toggle the theme of a list identified by its ID
   const toggleListTheme = (listId, theme) => {
     setListThemes((prevThemes) => ({
       ...prevThemes,
@@ -13,7 +12,6 @@ function ListThemeWrapper(props) {
     }));
   };
 
-  // Function to get the theme of a list by its ID
   const getListTheme = (listId) => {
     return listThemes[listId] || "default-list";
   };

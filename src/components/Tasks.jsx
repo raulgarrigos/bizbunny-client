@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BeatLoader } from "react-spinners";
 import { Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
@@ -51,12 +51,6 @@ function Tasks({ listId }) {
   const handleCloseEdit = () => {
     setShowModalEdit(false);
     setSelectedTaskId(null);
-  };
-
-  const handleEditComplete = (completed) => {
-    setShowModalEdit(false);
-    setSelectedTaskId(null);
-    fetchTasks();
   };
 
   const handleToggleComplete = async (taskId) => {

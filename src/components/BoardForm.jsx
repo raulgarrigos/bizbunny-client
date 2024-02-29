@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import service from "../services/config";
@@ -18,7 +18,7 @@ function BoardForm({ fetchBoards, showModal, handleClose }) {
     }
 
     try {
-      const response = await service.post("/boards", {
+      await service.post("/boards", {
         title,
         owner,
       });
